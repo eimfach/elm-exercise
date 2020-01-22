@@ -1,3 +1,5 @@
+My Solution: https://exercism.io/my/solutions/3f29af6984784d3d995c0bdc519dc8f5
+
 # Bob
 
 Bob is a lackadaisical teenager. In conversation, his responses are very limited.

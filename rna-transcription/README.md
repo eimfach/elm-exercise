@@ -1,3 +1,5 @@
+My Solution: https://exercism.io/my/solutions/9233bae68f0448a187655629bbae5390
+
 # RNA Transcription
 
 Given a DNA strand, return its RNA complement (per RNA transcription).
