@@ -15,10 +15,14 @@ hey remark =
                     False
 
         yell =
-            String.dropRight 1 remark
-                |> String.words
-                |> String.join ""
-                |> String.all Char.isUpper
+            let
+                alphaWords =
+                    remark
+                        |> String.words
+                        |> String.join ""
+                        |> String.filter Char.isAlpha
+            in
+            String.length alphaWords > 0 && String.all Char.isUpper alphaWords
 
         question =
             remark
