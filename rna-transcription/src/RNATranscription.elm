@@ -14,7 +14,7 @@ toRNA : String -> Result Char String
 toRNA dna =
     String.toList dna
         |> List.map parseDnaToRna
-        |> List.foldr convertNucleotide (Ok "")
+        |> List.foldl convertNucleotide (Ok "")
 
 
 convertNucleotide : Nucleotide -> Result Char String -> Result Char String
@@ -26,19 +26,19 @@ convertNucleotide nucleotide rna =
                     Err err
 
                 A ->
-                    Ok <| "A" ++ resultRna
+                    Ok <| resultRna ++ "A"
 
                 C ->
-                    Ok <| "C" ++ resultRna
+                    Ok <| resultRna ++ "C"
 
                 G ->
-                    Ok <| "G" ++ resultRna
+                    Ok <| resultRna ++ "G"
 
                 U ->
-                    Ok <| "U" ++ resultRna
+                    Ok <| resultRna ++ "U"
 
                 T ->
-                    Ok <| "T" ++ resultRna
+                    Ok <| resultRna ++ "T"
 
         Err theError ->
             Err theError
