@@ -18,8 +18,6 @@ hey remark =
             let
                 alphaWords =
                     remark
-                        |> String.words
-                        |> String.join ""
                         |> String.filter Char.isAlpha
             in
             String.length alphaWords > 0 && String.all Char.isUpper alphaWords
